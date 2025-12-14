@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d148hjpsrs5bl"]
+
+[ext_resource type="PackedScene" uid="uid://dm0jaq8scqg0h" path="res://addons/mousepotatoutilsplugin/game-menus/menu_metamanager.tscn" id="1_07onw"]
+[ext_resource type="PackedScene" uid="uid://o54fmh34aqss" path="res://addons/mousepotatoutilsplugin/example_game.tscn" id="2_hdnqi"]
+
+[node name="Game Sandbox" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu Metamanager" parent="CanvasLayer" node_paths=PackedStringArray("game_parent_node") instance=ExtResource("1_07onw")]
+game_parent_node = NodePath("../..")
+game_scene_template = ExtResource("2_hdnqi")
